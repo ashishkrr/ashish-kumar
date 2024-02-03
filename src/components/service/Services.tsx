@@ -54,7 +54,7 @@ const ServiceItem = styled.div<ServiceItemProps>`
 
 export const Services = () => {
     const screenType = useScreen();
-    const inlineMargin = screenType == "desktop" ? "1.2rem" : "0";
+    const inlineMargin = screenType === "desktop" ? "1.2rem" : "0";
     // const num_of_services = Array.from({ length: 3 });
     return (
       <Wrapper id="services" inlineMargin={inlineMargin}>

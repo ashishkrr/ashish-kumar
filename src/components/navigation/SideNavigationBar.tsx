@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { ScreenType } from "../../utils/custom-types";
 import { useScreen, useScrollAndMenuContext } from "../../context/context";
 import photo from "../../assets/images/ash.jpeg";
-import san from "../assets/images/san.png";
 import UnderlinedText from "../common/UnderlinedText";
 import { socialMediaIconElements } from "../../common/icons";
 
@@ -55,15 +54,15 @@ const Name = styled.h2`
   margin: 0;
 `;
 
-const NavLinks = styled.div`
-  border-bottom: 1px solid white;
-  height: 0.1rem;
-`;
+// const NavLinks = styled.div`
+//   border-bottom: 1px solid white;
+//   height: 0.1rem;
+// `;
 
-const NavLinkText = styled.h4`
-  color: white;
-  font-family: cursive;
-`;
+// const NavLinkText = styled.h4`
+//   color: white;
+//   font-family: cursive;
+// `;
 
 const NameWrapper = styled.div`
   border-bottom: 1px solid white;

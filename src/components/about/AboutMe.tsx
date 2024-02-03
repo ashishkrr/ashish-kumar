@@ -3,7 +3,7 @@ import { Wrapper } from "../common/Wrapper";
 import pho from "../../assets/images/ash.jpeg";
 export const AboutMe = () => {
     const screenType = useScreen();
-    const inlineMargin = screenType == "desktop" ? "1.2rem" : "0";
+    const inlineMargin = screenType === "desktop" ? "1.2rem" : "0";
     return (
       <Wrapper id="about" inlineMargin={inlineMargin}>
         <header>

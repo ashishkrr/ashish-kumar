@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { useScreen } from '../../context/context';
 
@@ -51,7 +50,7 @@ const QuoteContainer = styled.div`
 
 const Introduction = () => {
   const screenType = useScreen();
-  const inlineMargin = screenType == "desktop" ? "1.2rem" : "0";
+  const inlineMargin = screenType === "desktop" ? "1.2rem" : "0";
   return (
     <IntroContainer id='heyi' inlineMargin={inlineMargin} className='page-content'>
       <header>

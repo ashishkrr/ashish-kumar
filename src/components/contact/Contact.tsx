@@ -1,5 +1,4 @@
 import { ReactElement } from "react";
-import { AiOutlineTwitter } from "react-icons/ai";
 import { Wrapper } from "../common/Wrapper";
 import { useScreen } from "../../context/context";
 import * as Yup from "yup";
@@ -11,7 +10,7 @@ import { IoCall } from "react-icons/io5";
 
 export const Contact = () => {
   const screenType = useScreen();
-  const inlineMargin = screenType == "desktop" ? "1.2rem" : "0";
+  const inlineMargin = screenType === "desktop" ? "1.2rem" : "0";
   return (
     <Wrapper id="contact" inlineMargin={inlineMargin}>
       <header>
@@ -47,6 +46,7 @@ export const Contact = () => {
             description={"+91-8507041736"}
           />
           <iframe
+          title="something"
             src="https://www.google.com/maps/embed?pb=!1m20!1m8!1m3!1d15556.741968558763!2d77.6310152!3d12.8957911!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d12.8948281!2d77.6338468!4m3!3m2!1d12.894933499999999!2d77.6338476!5e0!3m2!1sen!2sin!4v1706935107730!5m2!1sen!2sin"
             style={{ border: "0", width: "100%" }}
             height="250"

@@ -4,7 +4,7 @@ import { Wrapper } from "../common/Wrapper";
 
 export const Skills = () => {
     const screenType = useScreen();
-    const inlineMargin = screenType == "desktop" ? "1.2rem" : "0";
+    const inlineMargin = screenType === "desktop" ? "1.2rem" : "0";
     return (
       <Wrapper id="skills" inlineMargin={inlineMargin}>
         <header>

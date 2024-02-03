@@ -7,7 +7,6 @@ import {
 import { FaDev, FaLinkedinIn } from "react-icons/fa";
 import { VscGithub } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { MdLightMode } from "react-icons/md";
 import { FaJava } from "react-icons/fa6";
 import { SiEclipseide } from "react-icons/si";
 import { SiJira } from "react-icons/si";

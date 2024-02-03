@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useScrollTracking } from "../../hooks/hooks";
-import { HeaderLeftIcons, HeaderRightIcons } from "../../common/icons";
+import { HeaderRightIcons } from "../../common/icons";
 import React from "react";
 import { useScrollAndMenuContext } from "../../context/context";
 
@@ -38,15 +38,15 @@ const HeaderWrapper = styled.div<HeaderCSSProps>`
   // }
 `;
 
-const HeaderLeftIconWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  right: 1rem;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+// const HeaderLeftIconWrapper = styled.div`
+//   position: absolute;
+//   top: 0;
+//   right: 1rem;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
 
 const HeaderRightIconWrapper = styled.div`
   position: absolute;
@@ -87,16 +87,16 @@ const Header = (props: HeaderCSSProps) => {
   );
 };
 
-const HeaderLeft = () => {
-  return (
-    <HeaderLeftIconWrapper>
-      {HeaderLeftIcons.map((icon) => {
-        const [key, IconElement] = icon.entries().next().value;
-        return <React.Fragment key={key}>{IconElement}</React.Fragment>;
-      })}
-    </HeaderLeftIconWrapper>
-  );
-};
+// const HeaderLeft = () => {
+//   return (
+//     <HeaderLeftIconWrapper>
+//       {HeaderLeftIcons.map((icon) => {
+//         const [key, IconElement] = icon.entries().next().value;
+//         return <React.Fragment key={key}>{IconElement}</React.Fragment>;
+//       })}
+//     </HeaderLeftIconWrapper>
+//   );
+// };
 
 const RightHeader = () => {
   const { handleMenuClick, setScrolling } = useScrollAndMenuContext();
