@@ -1,0 +1,32 @@
+name: Build CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: latest-ubuntu
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Setup nodejs
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 14
+
+      - name: Install dependencies
+        uses: npm run Install
+
+      - name: build app
+        uses: npm run build
+
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: build
