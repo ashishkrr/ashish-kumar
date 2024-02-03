@@ -1,28 +1,27 @@
-name: Build CI
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  build:
-    name: Build
-    runs-on: latest-ubuntu
+  deploy:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repo
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 14
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build app
+      - name: Build
         run: npm run build
 
       - name: Deploy to GitHub Pages
