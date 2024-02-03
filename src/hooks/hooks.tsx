@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export const useMenuButton = (): {
   isMenuButtonClicked: boolean;
@@ -30,25 +30,25 @@ export const useScrollTracking = (): {
   positionType: string;
 } => {
   const [positionType, setPositionType] = useState<string>("absolute");
-  let prevScrollY = 0;
+  const prevScrollYRef = useRef<number>(0);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY < prevScrollY) {
-      setPositionType("fixed");
+    if (currentScrollY < prevScrollYRef.current) {
+      setPositionType('fixed');
     } else {
-      setPositionType("absolute");
+      setPositionType('absolute');
     }
-    prevScrollY = currentScrollY;
-  };
+    prevScrollYRef.current = currentScrollY;
+  }, []);
 
   useEffect(() => {
     document.addEventListener("scroll", handleScroll);
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return { positionType };
 };
