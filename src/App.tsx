@@ -4,7 +4,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter basename="https://ashishkrr.github.io">
+    <HashRouter>
        <Routes>
         <Route path="/" element={<Landing/>}></Route>
       </Routes>
