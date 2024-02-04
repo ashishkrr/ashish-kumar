@@ -4,7 +4,7 @@ import Landing from "./pages/Landing";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="https://ashishkrr.github.io/ashish-kumar">
       <Routes>
         <Route path="/" element={<Landing/>}></Route>
       </Routes>
