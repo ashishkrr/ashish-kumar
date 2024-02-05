@@ -2,7 +2,7 @@
   "name": "ashwaraj",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://ashishkrr.github.io/ashish-kumar",
+  "homepage": "http://localhost:3000/ashish-kumar",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.22.0",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.0",
     "typescript": "^4.9.5",

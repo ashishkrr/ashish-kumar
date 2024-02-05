@@ -1,0 +1,6 @@
+FROM nginx:alpine
+LABEL "ashish.kumar1907@gmail.com"
+WORKDIR /app
+COPY ./build package*.json ./
+
+
