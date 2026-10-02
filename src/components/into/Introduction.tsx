@@ -4,7 +4,7 @@ import { useScreen } from '../../context/context';
 type IntroContainerProps = {
   inlineMargin: string
 }
-const IntroContainer = styled.div<IntroContainerProps>`
+const IntroContainer = styled.section<IntroContainerProps>`
   margin-top: 20px;
   padding: 15px;
   font-family: 'Noto Sans, Helvetica, Arial, sans-serif';
@@ -52,15 +52,16 @@ const Introduction = () => {
   const screenType = useScreen();
   const inlineMargin = screenType === "desktop" ? "1.2rem" : "0";
   return (
-    <IntroContainer id='heyi' inlineMargin={inlineMargin} className='page-content'>
+    <IntroContainer id='home' inlineMargin={inlineMargin} className='page-content'>
       <header>
-        <h1 className="page-title">Hi there!</h1>
+        <h1 className="page-title">Hi, I’m Ashish Kumar</h1>
         <div className="hr pb0" />
       </header>
       <p>
-        <strong>Welcome!</strong> My name is <strong>Ashish Kumar</strong>, I’m an IT Professional and this site is my{' '}
-        <strong>open book</strong> where I <strong>express myself</strong> and <strong>share my ideas, experience, and knowledge</strong>. I hope you find the material and content useful. Any{' '}
-        <strong>feedback</strong> is always more than welcome. <strong>Enjoy your stay!</strong>
+        I’m an IT professional based in Bengaluru, India, with an interest in
+        software engineering, web and mobile development, and emerging
+        technologies. This portfolio shares my skills, services, and background.
+        If you’d like to connect or collaborate, please get in touch.
       </p>
       <QuoteContainer>
         <p style={{margin: 0}}>“If someone is in need, lend them a helping hand. Do not wait for a thank you.”</p>

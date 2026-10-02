@@ -7,7 +7,7 @@ export const AboutMe = () => {
     return (
       <Wrapper id="about" inlineMargin={inlineMargin}>
         <header>
-          <h1 className="page-title">Who am I?</h1>
+          <h2 className="page-title">About me</h2>
           <div className="hr pb0" />
         </header>
         <div>
@@ -19,7 +19,7 @@ export const AboutMe = () => {
               float: "right",
             }}
             src={pho}
-            alt=""
+            alt="Portrait of Ashish Kumar"
           />
           <p
             style={{
