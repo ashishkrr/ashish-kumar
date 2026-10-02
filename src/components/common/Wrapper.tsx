@@ -3,7 +3,7 @@ import styled from "styled-components";
 type WrapperProps = {
   inlineMargin: string;
 };
-export const Wrapper = styled.div<WrapperProps>`
+export const Wrapper = styled.section<WrapperProps>`
   padding: 15px;
   font-family: "Noto Sans, Helvetica, Arial, sans-serif";
   margin-inline: ${(wrapperProps) => wrapperProps.inlineMargin};

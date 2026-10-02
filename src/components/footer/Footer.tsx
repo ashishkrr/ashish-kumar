@@ -34,26 +34,14 @@ const Footer = () => {
     <FooterContainer>
       <Copyright>
         <small className="copyright">
-          © 2021 Ashish Kumar. All rights reserved.{" "}
+          © {new Date().getFullYear()} Ashish Kumar.{" "}
         </small>
       </Copyright>
       <LegalNav>
         <small>
-          <a className="footer-nav" href="/LICENSE/">
-            LICENSE
-          </a>{" "}
-          |{" "}
-          <a className="footer-nav" href="/cookies-policy/">
-            COOKIES POLICY
-          </a>{" "}
-          |{" "}
-          <a className="footer-nav" href="/IMPRESSUM/">
-            IMPRESSUM
-          </a>{" "}
-          |{" "}
-          <a className="footer-nav" href="./new.pdf" download={true}>
-            RESUME
-          </a>{" "}
+            <a className="footer-nav" href={`${process.env.PUBLIC_URL}/new.pdf`} download>
+              RESUME
+            </a>{" "}
         </small>
       </LegalNav>
     </FooterContainer>

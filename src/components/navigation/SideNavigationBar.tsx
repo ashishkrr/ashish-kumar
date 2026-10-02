@@ -11,7 +11,7 @@ type NavBarCSSProps = {
   left: string;
 };
 
-const NavBar = styled.div<NavBarCSSProps>`
+const NavBar = styled.aside<NavBarCSSProps>`
   position: fixed;
   height: 100vh;
   background-color: black;
@@ -91,7 +91,7 @@ const SideNavigationBar = (): ReactElement => {
 
   const screenType: ScreenType = useScreen();
 
-  const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
+  const handleScroll = (event: React.UIEvent<HTMLElement>) => {
     event.preventDefault();
     if (!isScrollingDown) {
       handleMenuClick(false);
@@ -148,7 +148,7 @@ const SideNavigationBar = (): ReactElement => {
     >
       <NavBarContent>
         <ImageWrapper>
-          <Image src={photo} />
+          <Image src={photo} alt="Ashish Kumar" />
         </ImageWrapper>
         <NameWrapper>
           <Name>Ashish Kumar</Name>
@@ -162,7 +162,7 @@ const SideNavigationBar = (): ReactElement => {
 
 const NavScreen = () => {
   const navList = [
-    "Heyi",
+    "Home",
     "Skills",
     "Services",
     "About",
@@ -170,7 +170,8 @@ const NavScreen = () => {
   ];
 
   return (
-    <div
+    <nav
+      aria-label="Main navigation"
       style={{ marginTop: "2rem", display: "flex", flexDirection: "column" , alignItems: "center"}}
     >
       {navList.map((item, key) => {
@@ -187,7 +188,7 @@ const NavScreen = () => {
           />
         );
       })}
-    </div>
+    </nav>
   );
 };
 

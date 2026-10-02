@@ -20,7 +20,7 @@ const Content = styled.div`
   height: 100vh;
 `;
 
-const NavContent = styled.div<PageContentCSSProps & React.Ref<HTMLDivElement>>`
+const NavContent = styled.main<PageContentCSSProps>`
   position: absolute;
   top: 0;
   left: ${(pageContentCSSProps) => `${pageContentCSSProps.left}`};
@@ -60,8 +60,11 @@ const PageContent = () => {
   };
   return (
     <>
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <Header left={getPageLeftPosition()} position={""} />
-      <NavContent left={getPageLeftPosition()}>
+      <NavContent id="main-content" left={getPageLeftPosition()}>
         <Introduction />
         <Skills />
         <Services />

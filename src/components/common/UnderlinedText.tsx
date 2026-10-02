@@ -7,7 +7,7 @@ interface UnderlinedTextProps {
   fontFamily?: string;
   fontSize?: string;
   underlinePosition: string;
-  tag: keyof JSX.IntrinsicElements;
+  tag?: keyof JSX.IntrinsicElements;
   margin?: string;
 }
 

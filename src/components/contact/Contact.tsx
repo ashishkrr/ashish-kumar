@@ -14,7 +14,7 @@ export const Contact = () => {
   return (
     <Wrapper id="contact" inlineMargin={inlineMargin}>
       <header>
-        <h1 className="page-title">Contact</h1>
+        <h2 className="page-title">Contact</h2>
         <div className="hr pb0" />
       </header>
       <div
@@ -33,7 +33,7 @@ export const Contact = () => {
           <ContactItems
             icon={<FaLocationDot size={25} color="black" />}
             contactWay={"Location"}
-            description={"Electronic city bengaluru"}
+            description={"Electronic City, Bengaluru, India"}
           />
           <ContactItems
             icon={<IoMdMail size={25} color="black" />}
@@ -46,7 +46,7 @@ export const Contact = () => {
             description={"+91-8507041736"}
           />
           <iframe
-          title="something"
+            title="Map of Electronic City, Bengaluru"
             src="https://www.google.com/maps/embed?pb=!1m20!1m8!1m3!1d15556.741968558763!2d77.6310152!3d12.8957911!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d12.8948281!2d77.6338468!4m3!3m2!1d12.894933499999999!2d77.6338476!5e0!3m2!1sen!2sin!4v1706935107730!5m2!1sen!2sin"
             style={{ border: "0", width: "100%" }}
             height="250"
@@ -88,15 +88,19 @@ const ContactItems = ({
   );
 };
 
-const onSubmit = (values: {}) => {
-  console.log("values", values);
-};
-
 const initialValues = {
   name: "",
   email: "",
   subject: "",
   message: "",
+};
+
+const onSubmit = (values: typeof initialValues) => {
+  const subject = encodeURIComponent(values.subject);
+  const body = encodeURIComponent(
+    `From: ${values.name} (${values.email})\n\n${values.message}`
+  );
+  window.location.href = `mailto:ashish.kumar19097@gmail.com?subject=${subject}&body=${body}`;
 };
 
 const validateSchema = Yup.object({
@@ -117,19 +121,19 @@ const MessageForm = () => {
         <Form>
           <div className="form-control r1">
             <label htmlFor="name">Name</label>
-            <Field type="text" name="name" />
+            <Field id="name" type="text" name="name" autoComplete="name" />
             <ErrorMessage name="name" component="div" className="form-error" />
           </div>
 
           <div className="form-control r1" style={{ marginLeft: "1%" }}>
             <label htmlFor="email">Email</label>
-            <Field type="text" name="email" />
+            <Field id="email" type="email" name="email" autoComplete="email" />
             <ErrorMessage name="email" component="div" className="form-error" />
           </div>
 
           <div className="form-control">
             <label htmlFor="subject">Subject</label>
-            <Field type="text" name="subject" />
+            <Field id="subject" type="text" name="subject" />
             <ErrorMessage
               name="subject"
               component="div"
@@ -139,9 +143,9 @@ const MessageForm = () => {
 
           <div className="form-control" style={{ height: "230px" }}>
             <label htmlFor="message">Message</label>
-            <Field as="textarea" name="subject" />
+            <Field id="message" as="textarea" name="message" />
             <ErrorMessage
-              name="meaasge"
+              name="message"
               component="div"
               className="form-error"
             />

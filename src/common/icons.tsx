@@ -18,39 +18,38 @@ import crm from "../assets/images/crm.png";
 import inno from "../assets/images/inno.png";
 import games from "../assets/images/games.png";
 import bots from "../assets/images/bots.png";
-import { Link } from "react-router-dom";
 
 //Side navigation bar icons
 export const socialMediaIconElements: Map<String, ReactElement>[] = [
   new Map<String, ReactElement>().set(
     "github",
-    <Link to={"https://github.com/ashishkrr"}>
+    <a href="https://github.com/ashkr19" aria-label="GitHub" target="_blank" rel="noreferrer">
       <AiOutlineGithub color="white" />
-    </Link>
+    </a>
   ),
   new Map<String, ReactElement>().set(
     "twitter",
-    <Link to={"https://twitter.com/ashwaraj2719"}>
+    <a href="https://twitter.com/ashwaraj2719" aria-label="Twitter" target="_blank" rel="noreferrer">
       <AiOutlineTwitter color="white" />
-    </Link>
+    </a>
   ),
   new Map<String, ReactElement>().set(
     "linkdin",
-    <Link to={"https://www.linkedin.com/in/ashish-kumar-48171b275/"}>
+    <a href="https://www.linkedin.com/in/ashish-kumar-48171b275/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
       <FaLinkedinIn color="white" />
-    </Link>
+    </a>
   ),
   new Map<String, ReactElement>().set(
     "dev",
-    <Link to={"https://dev.to/ashishkr"}>
+    <a href="https://dev.to/ashishkr" aria-label="DEV Community" target="_blank" rel="noreferrer">
       <FaDev color="white" />
-    </Link>
+    </a>
   ),
   new Map<String, ReactElement>().set(
     "medium",
-    <Link to={"https://medium.com/@ashish.kumar19097"}>
+    <a href="https://medium.com/@ashish.kumar19097" aria-label="Medium" target="_blank" rel="noreferrer">
       <AiOutlineMedium color="white" />
-    </Link>
+    </a>
   ),
 ];
 
@@ -69,7 +68,10 @@ export const HeaderRightIcons: Map<string, ReactElement>[] = [
   ),
   new Map<string, ReactElement>().set(
     "github",
-    <Link
+    <a
+      aria-label="GitHub profile"
+      target="_blank"
+      rel="noreferrer"
       style={{
         display: "flex",
         justifyContent: "center",
@@ -77,10 +79,10 @@ export const HeaderRightIcons: Map<string, ReactElement>[] = [
         width: "100%",
         height: "100%",
       }}
-      to={"https://github.com/ashishkrr"}
+      href="https://github.com/ashkr19"
     >
       <AiOutlineGithub style={{ width: "1.5em", height: "1.5em" }} />
-    </Link>
+    </a>
   ),
 ];
 

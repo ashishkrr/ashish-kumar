@@ -10,7 +10,7 @@ type HeaderCSSProps = {
   position: string;
 };
 
-const HeaderWrapper = styled.div<HeaderCSSProps>`
+const HeaderWrapper = styled.header<HeaderCSSProps>`
   position: ${(headerContentCSSProps) => `${headerContentCSSProps.position}`};
   top: 0;
   left: ${(headerContentCSSProps) => `${headerContentCSSProps.left}`};

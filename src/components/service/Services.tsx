@@ -59,16 +59,16 @@ export const Services = () => {
     return (
       <Wrapper id="services" inlineMargin={inlineMargin}>
         <header>
-          <h1 className="page-title">Experience & Services</h1>
+          <h2 className="page-title">Services</h2>
           <div className="hr pb0" />
         </header>
         <ServicesWrapper>
           {serviceImages.map((imageURL, index) => {
             return (
               <ServiceItem key={index} backgroundUrl={imageURL}>
-                <h4 style={{ marginBottom: "0.5rem" }}>
+                <h3 style={{ marginBottom: "0.5rem" }}>
                   {services[index].keys().next().value}
-                </h4>
+                </h3>
                 <p style={{ marginTop: 0, marginBottom: 0 }}>
                   {services[index].values().next().value}
                 </p>
